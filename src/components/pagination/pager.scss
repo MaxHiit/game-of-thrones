@@ -1,0 +1,18 @@
+.pager {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding: 0 0.5rem;
+	margin-top: 1rem;
+
+	&_actions {
+		display: flex;
+		align-items: center;
+
+		&_button {
+			&:not(:first-child) {
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
