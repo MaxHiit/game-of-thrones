@@ -12,5 +12,12 @@ export const characterLoader: LoaderFunction = async ({ params }: LoaderFunction
 	const { characterId } = params as { characterId: string };
 	const character = await getCharacter(characterId);
 
+	if (!character) {
+		throw new Response('', {
+			status: 404,
+			statusText: 'Not Found'
+		});
+	}
+
 	return { character };
 };
