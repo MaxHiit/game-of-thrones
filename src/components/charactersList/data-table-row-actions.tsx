@@ -13,7 +13,7 @@ export function DataTableRowActions<TData>({ row }: DataTableRowActionsProps<TDa
 	if (!character.url) return <span>No link</span>;
 
 	return (
-		<div className='w-[100px]'>
+		<div className='ml-auto w-[100px]'>
 			<Button variant='outline'>
 				<Link to={getCharacterDetailUrl(character.url)}>Voir plus</Link>
 			</Button>
